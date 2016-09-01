@@ -1,4 +1,4 @@
-package cn.thinkjoy.startup.ui.fragment;
+package cn.thinkjoy.startup.ui.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

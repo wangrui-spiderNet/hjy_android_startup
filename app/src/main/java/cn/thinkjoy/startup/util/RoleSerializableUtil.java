@@ -44,7 +44,7 @@ public class RoleSerializableUtil {
 	 */
 	public static LoginBean deserializePerson(Context context) throws Exception, IOException {
 		File dir = new File(context.getFilesDir().getAbsolutePath(), context.getPackageName());
-		if(!dir.exists()){
+		if(dir!=null&&!dir.exists()){
 			return null;
 		}else{
 			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File(dir, "user.txt")));

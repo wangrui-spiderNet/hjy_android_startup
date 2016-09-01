@@ -7,7 +7,7 @@
         android:id="@+id/tv_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="fragment_work"
+        android:text="实力列表，点击进入"
         android:gravity="center"
         />
 

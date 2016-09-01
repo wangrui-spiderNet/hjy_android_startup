@@ -6,6 +6,8 @@ package cn.thinkjoy.startup.util;
  */
 public class ConstantSet {
 
+
+
     /**
      * 请求成功
      */
@@ -100,6 +102,7 @@ public class ConstantSet {
     public static final String ACCOUNT = "account";//登录手机号
     public static final String PASSWORD = "password";//登录密码
     public static final String ISLOGIN = "islogin";//是否第一次登录
+    public static final String SESSION="session";
 
     /*
     * 修改密码和找回密码*/

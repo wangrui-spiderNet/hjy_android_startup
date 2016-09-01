@@ -1,4 +1,4 @@
-package cn.thinkjoy.startup.ui.activity;
+package cn.thinkjoy.startup.ui.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,9 +8,6 @@ import android.widget.TextView;
 
 import cn.thinkjoy.startup.R;
 import cn.thinkjoy.startup.base.BaseActivity;
-import cn.thinkjoy.startup.ui.fragment.MaterialPageFragment;
-import cn.thinkjoy.startup.ui.fragment.MePageFragment;
-import cn.thinkjoy.startup.ui.fragment.WorkPageFragment;
 import cn.thinkjoy.startup.widget.FragmentTabHost;
 
 /**

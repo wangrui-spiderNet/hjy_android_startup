@@ -1,18 +1,24 @@
 package cn.thinkjoy.startup.ui.activity;
 
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import cn.thinkjoy.startup.R;
 import cn.thinkjoy.startup.base.BaseListActivity;
 import cn.thinkjoy.startup.bean.FoundBean;
 import cn.thinkjoy.startup.widget.recycle.BasePullViewHolder;
 import cn.thinkjoy.startup.widget.recycle.PullRecycler;
+import cn.thinkjoy.startup.widget.recycle.layoutmanager.ILayoutManager;
+import cn.thinkjoy.startup.widget.recycle.layoutmanager.MyGridLayoutManager;
+import cn.thinkjoy.startup.widget.recycle.layoutmanager.MyLinearLayoutManager;
+import cn.thinkjoy.startup.widget.recycle.layoutmanager.MyStaggeredGridLayoutManager;
 
 /**
  * 示例代码
@@ -34,19 +40,19 @@ public class SampleListActivity extends BaseListActivity<FoundBean> {
         return new SampleViewHolder(view);
     }
 
-//    @Override
-//    protected ILayoutManager getLayoutManager() {
-//        random = new Random().nextInt(3);
-//        switch (random) {
-//            case 0:
-//                return new MyLinearLayoutManager(getApplicationContext());
-//            case 1:
-//                return new MyGridLayoutManager(getApplicationContext(), 3);
-//            case 2:
-//                return new MyStaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
-//        }
-//        return super.getLayoutManager();
-//    }
+    @Override
+    protected ILayoutManager getLayoutManager() {
+        random = new Random().nextInt(3);
+        switch (random) {
+            case 0:
+                return new MyLinearLayoutManager(getApplicationContext());
+            case 1:
+                return new MyGridLayoutManager(getApplicationContext(), 3);
+            case 2:
+                return new MyStaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
+        }
+        return super.getLayoutManager();
+    }
 
     @Override
     protected RecyclerView.ItemDecoration getItemDecoration() {

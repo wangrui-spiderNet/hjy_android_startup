@@ -1,4 +1,4 @@
-package cn.thinkjoy.startup.ui.fragment;
+package cn.thinkjoy.startup.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;

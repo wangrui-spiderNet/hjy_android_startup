@@ -13,18 +13,22 @@ public class APPPreferenceUtil {
 
     private static APPPreferenceUtil instance = null;
     private SharedPreferences sp = null;
+    private static final String name="application_shared_preference";
 
     private APPPreferenceUtil() {
-        sp = MyApplication.getAppContext().getSharedPreferences("app", Context.MODE_PRIVATE);
+        sp = MyApplication.getAppContext().getSharedPreferences(name, Context.MODE_PRIVATE);
     }
 
-    public synchronized static APPPreferenceUtil getInstance() {
+    private APPPreferenceUtil(Context mContext){
+        sp = mContext.getSharedPreferences(name, Context.MODE_PRIVATE);
+    }
+
+    public synchronized static APPPreferenceUtil getInstance(Context mContext) {
         if (instance == null) {
-            instance = new APPPreferenceUtil();
+            instance = new APPPreferenceUtil(mContext);
         }
         return instance;
     }
-
 
     public APPPreferenceUtil(Context context, String file) {
         sp = context.getSharedPreferences(file, context.MODE_PRIVATE);

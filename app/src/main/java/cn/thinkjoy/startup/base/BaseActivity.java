@@ -103,7 +103,7 @@ public abstract class BaseActivity  extends FragmentActivity {
         if (savedInstanceState != null) {
             role = (Role) savedInstanceState.getSerializable("role");
             session = savedInstanceState.getString("session");
-            APPPreferenceUtil.getInstance().setSession(session);
+            APPPreferenceUtil.getInstance(this).setSession(session);
             ((MyApplication) this.getApplication()).setRole(role);
         }
 
@@ -154,6 +154,10 @@ public abstract class BaseActivity  extends FragmentActivity {
         this.base_content = (LinearLayout) findViewById(R.id.base_content);
         this.framelayout_root = (FrameLayout) findViewById(R.id.framelayout_root);
         role=MyApplication.getInstance().getRole();
+    }
+
+    public void hideTitle(){
+        rl_common_title.setVisibility(View.GONE);
     }
 
     /**

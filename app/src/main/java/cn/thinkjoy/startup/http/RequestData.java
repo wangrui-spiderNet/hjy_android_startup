@@ -68,7 +68,7 @@ public class RequestData {
             userType = 0;
             accountId = 0;
         }
-        session = APPPreferenceUtil.getInstance().getSession();
+        session = APPPreferenceUtil.getInstance(MyApplication.getAppContext()).getSession();
         appVersion = DeviceUtils.getVersionName(context);
         if (TextUtils.isEmpty(appVersion)) {
             appVersion = context.getResources().getString(R.string.app_version);
