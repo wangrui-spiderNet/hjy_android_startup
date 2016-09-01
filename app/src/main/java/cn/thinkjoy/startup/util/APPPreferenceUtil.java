@@ -23,9 +23,9 @@ public class APPPreferenceUtil {
         sp = mContext.getSharedPreferences(name, Context.MODE_PRIVATE);
     }
 
-    public synchronized static APPPreferenceUtil getInstance(Context mContext) {
+    public synchronized static APPPreferenceUtil getInstance() {
         if (instance == null) {
-            instance = new APPPreferenceUtil(mContext);
+            instance = new APPPreferenceUtil();
         }
         return instance;
     }

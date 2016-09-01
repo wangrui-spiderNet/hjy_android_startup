@@ -40,7 +40,7 @@ public class SplashActivity extends BaseActivity {
             @Override
             public void run() {
                 if (isNetworkAvailable) {
-                    isFirstLogin = APPPreferenceUtil.getInstance(SplashActivity.this).getPrefBoolean(
+                    isFirstLogin = APPPreferenceUtil.getInstance().getPrefBoolean(
                             mContext.getResources().getString(R.string.app_version), true);
 
                     if (isFirstLogin) {
@@ -59,7 +59,7 @@ public class SplashActivity extends BaseActivity {
                             e.printStackTrace();
                         }
 
-                        boolean isLogin = APPPreferenceUtil.getInstance(SplashActivity.this).getPrefBoolean(ConstantSet.ISLOGIN, false);
+                        boolean isLogin = APPPreferenceUtil.getInstance().getPrefBoolean(ConstantSet.ISLOGIN, false);
                         if (isLogin) {
                             if (role == null) {
 //                                startActivity(new Intent(mContext, SelectRoleActivity.class));

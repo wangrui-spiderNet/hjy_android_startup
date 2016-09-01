@@ -103,7 +103,7 @@ public abstract class BaseActivity  extends FragmentActivity {
         if (savedInstanceState != null) {
             role = (Role) savedInstanceState.getSerializable("role");
             session = savedInstanceState.getString("session");
-            APPPreferenceUtil.getInstance(this).setSession(session);
+            APPPreferenceUtil.getInstance().setSession(session);
             ((MyApplication) this.getApplication()).setRole(role);
         }
 

@@ -94,7 +94,7 @@ public class WelcomeToActivity extends BaseActivity {
             public void onPageScrollStateChanged(int arg0) {
                 if (rightEdge != null && !rightEdge.isFinished()) {//到了最后一张并且还继续拖动，出现蓝色限制边条了
                     if (fromPage != ConstantSet.SETTING) {
-                        APPPreferenceUtil.getInstance(WelcomeToActivity.this).setPrefBoolean(mContext.getResources().getString(R.string.app_version), false);
+                        APPPreferenceUtil.getInstance().setPrefBoolean(mContext.getResources().getString(R.string.app_version), false);
                         startActivity(new Intent(mContext, LoginActivity.class));
                     }
                     finish();
@@ -105,7 +105,7 @@ public class WelcomeToActivity extends BaseActivity {
         this.introduce.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("NewApi")
             public void onClick(View v) {
-                APPPreferenceUtil.getInstance(WelcomeToActivity.this).setPrefBoolean(mContext.getResources().getString(R.string.app_version), false);
+                APPPreferenceUtil.getInstance().setPrefBoolean(mContext.getResources().getString(R.string.app_version), false);
                 if (fromPage != ConstantSet.SETTING) {
 
                     startActivity(new Intent(mContext, LoginActivity.class));

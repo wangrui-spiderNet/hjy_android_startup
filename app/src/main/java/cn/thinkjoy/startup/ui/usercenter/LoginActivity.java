@@ -67,8 +67,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
     @Override
     protected void initComponent() {
-        account = APPPreferenceUtil.getInstance(MyApplication.getAppContext()).getAccount();
-        password = APPPreferenceUtil.getInstance(MyApplication.getAppContext()).getPasswd();
+        account = APPPreferenceUtil.getInstance().getAccount();
+        password = APPPreferenceUtil.getInstance().getPasswd();
         mEtAccout.setText(account);
         mEtPwd.setText(password);
         initEtPwd();
@@ -138,13 +138,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
     public void success(LoginBean loginBean) {
         if (loginBean != null && loginBean.getState() == 1) {
-            APPPreferenceUtil.getInstance(MyApplication.getAppContext()).setAccount(account);
-            APPPreferenceUtil.getInstance(MyApplication.getAppContext()).setPasswd(password);
-            APPPreferenceUtil.getInstance(MyApplication.getAppContext()).setPrefBoolean(ConstantSet.IS_REFRESH_CONTACT, true);//登录要刷新通讯录
+            APPPreferenceUtil.getInstance().setAccount(account);
+            APPPreferenceUtil.getInstance().setPasswd(password);
+            APPPreferenceUtil.getInstance().setPrefBoolean(ConstantSet.IS_REFRESH_CONTACT, true);//登录要刷新通讯录
             try {
                 RoleSerializableUtil.serializePerson(mContext, loginBean);
                 LoginBean bean = RoleSerializableUtil.deserializePerson(mContext);
-                APPPreferenceUtil.getInstance(MyApplication.getAppContext()).setPrefBoolean(ConstantSet.ISLOGIN, true);
+                APPPreferenceUtil.getInstance().setPrefBoolean(ConstantSet.ISLOGIN, true);
 
                 if (bean.getItems().size() > 1) {
 //                    startActivity(new Intent(mContext, SelectRoleActivity.class));
@@ -159,7 +159,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            APPPreferenceUtil.getInstance(MyApplication.getAppContext()).setSession(loginBean.getSession());
+            APPPreferenceUtil.getInstance().setSession(loginBean.getSession());
         } else {
             ToastUtil.showToast(mContext, loginBean.getMsg());
         }

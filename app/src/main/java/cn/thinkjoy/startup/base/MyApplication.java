@@ -26,6 +26,7 @@ import javax.security.auth.x500.X500Principal;
 
 import cn.thinkjoy.startup.bean.Role;
 import cn.thinkjoy.startup.config.ConfigRead;
+import cn.thinkjoy.startup.util.APPPreferenceUtil;
 import cn.thinkjoy.startup.util.ActivityManager;
 import cn.thinkjoy.startup.util.RoleSerializableUtil;
 import okhttp3.OkHttpClient;
@@ -48,6 +49,7 @@ public class MyApplication extends Application {
         super.onCreate();
         appContext = this;
         instance = this;
+
         OkHttpClient.Builder builder = OkHttpProxy.getInstance().newBuilder()
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS)
@@ -66,6 +68,8 @@ public class MyApplication extends Application {
         }
 
         OkHttpProxy.setInstance(builder.build());
+
+        APPPreferenceUtil.getInstance();
 
     }
 

@@ -43,12 +43,9 @@ public class UserCenterApi {
         map.put("username", username);
         map.put("password", password);
         map.put(ConstantSet.SERVER_RESPONCE_CMD, CMDHelper.CMD_100101);
-//        map.put(ConstantSet.SERVER_RESPONCE_CMD, "10001");
         RequestData.instance = null;
-        map.putAll(RequestData.getInstance().getInitParams(MyApplication.getAppContext()));
+        map.putAll(RequestData.getInstance().getInitParams(mContext));
         OkHttpManager.getInstance().postAsync(mContext, URLHelpers.URL_SYSTEM + CMDHelper.CMD_100101, map, okCallBack);
-//        String url1 ="http://211.140.7.29:3005/mobile/pull/combineV2t/sys";
-//        OkHttpManager.getInstance().postAsync(mContext, url1, map, okCallBack);
     }
 
     /**
