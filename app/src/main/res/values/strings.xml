@@ -1,0 +1,237 @@
+<resources>
+    <string name="app_name">启动项目</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="app_version">1.0.1</string>
+    <string name="app_versioncode">1</string>
+
+    <!--常用-->
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="action_done">完成</string>
+    <string name="back">返回</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="send">发布</string>
+    <string name="send1">发送</string>
+    <string name="setting">设置</string>
+    <string name="select_all">全选</string>
+    <string name="tip">提示</string>
+    <string name="gd_phone_back">退出</string>
+
+    <!--登	录-->
+    <string name="login_txt">登	录</string>
+    <string name="login_personname_hint">请输入您的账号</string>
+    <string name="login_password_hint">请输入新密码</string>
+    <string name="login_verify_code">请输入验证码</string>
+    <string name="login_get_verify_code">获取验证码</string>
+    <string name="login_verify_code_refrash">刷新</string>
+    <string name="login_checkBox_remember_password">记住密码</string>
+    <string name="login_checkBox_automatic_login">自动登录</string>
+    <string name="immediately_login">立即登录</string>
+    <string name="login_forget_password">忘记密码</string>
+    <string name="login_reset_password">重置密码</string>
+    <string name="login_dynamic_password">动态密码</string>
+
+    <!--选照片-->
+    <string name="folder_all">所有图片</string>
+    <string name="photo_unit">拍摄</string>
+    <string name="error_no_permission">没有许可</string>
+    <string name="tip_take_photo">拍照</string>
+
+    <string name="action_button_string">%1$s(%2$d/%3$d)</string>
+    <string name="msg_amount_limit">你最多只能选择9张图片</string>
+    <string name="permission_dialog_ok">好</string>
+    <string name="permission_dialog_cancel">取消</string>
+    <string name="permission_dialog_title">许可否认</string>
+    <string name="msg_no_camera">没有找到系统的相机</string>
+    <string name="error_image_not_exist">图片错误</string>
+    <string name="permission_rationale_write_storage">存储需要写权限保存图像.</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="attach_picture">图片</string>
+    <string name="collect_picture_succeed">收藏图片成功</string>
+    <string name="collect_picture_failed">收藏图片失败</string>
+    <string name="cancel_picture_succeed">取消图片成功</string>
+    <string name="cancel_picture_failed">取消图片失败</string>
+    <string name="save_picture_succeed">保存图片成功</string>
+    <string name="save_picture_failed">保存图片失败</string>
+    <string name="get_picture_failed">获取图片失败</string>
+
+    <!--通知-->
+    <string name="from_name">来自:%s</string>
+    <string name="content_count">%d/500</string>
+    <string name="content_count1">0/500</string>
+    <string name="detail">详情</string>
+    <string name="send_notice">发通知</string>
+    <string name="select_receivers">选择发送人</string>
+    <string name="hint_content">请在此输入内容</string>
+    <string name="receiver_count">共%s人</string>
+    <string name="receiver_header">%1$s(%2$d)人</string>      <!--小二(1)班(30)人-->
+    <string name="selected_receiver_count">已选%d人</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="content">"各位家长,我园将于2016年5月14日举行亲子运动会,届时将有丰富的活动,望各位家长能够积极参与!"</string>
+    <string name="send_notice_succeed">"发布通知成功"</string>
+    <string name="receiver_title">"接收人 (%s)人"</string>
+    <string name="receiver_tips">"请至少选择一名接收人"</string>
+
+    <!--设置-->
+    <string name="load_ing">加载中···</string>
+    <string name="send_ing">正在发布···</string>
+    <string name="empty_data_text">暂无数据 </string>
+    <string name="log_out">退出登录</string>
+    <string name="clean_cache">清除缓存</string>
+    <string name="about_he_edu">关于和教育</string>
+    <string name="modify_psw">修改密码</string>
+    <string name="new_msg_notification">新消息通知</string>
+
+
+    <!--关于和教育-->
+    <string name="update_record">更新记录</string>
+    <string name="welcome_page">欢迎页</string>
+    <string name="function_intro">功能介绍</string>
+    <string name="current_version">"当前版本 "</string>
+    <string name="pwd_error">密码长度至少6位</string>
+    <string name="pwd_not_correct">密码输入错误</string>
+    <string name="current_cache_size">当前缓存大小:</string>
+    <string name="confirm_clean">确定清除？</string>
+
+
+    <!-- 通讯录 -->
+    <string name="contact_hint_txt_1">搜索人名或手机号、群名称</string>
+
+    <!--家园圈-->
+
+    <string name="select_class">发布范围</string>
+
+    <string name="hint_comment">我来说两句...</string>
+    <string name="homelandCircle">家园圈</string>
+    <string name="cookbook">宝宝菜谱</string>
+    <string name="cookbook_baby">宝宝菜谱</string>
+    <string name="lessonplan">课程计划</string>
+    <string name="send_honglandCircle">发布家园圈</string>
+    <string name="send_cookbook">发布菜谱</string>
+    <string name="send_lessonplan">发布课程计划</string>
+    <string name="week">本周安排</string>
+    <string name="attendance">考勤查询</string>
+    <string name="growth">成长记录</string>
+    <string name="comment">评论</string>
+    <string name="likedesc">李阳家长,周明家长,扬天家长,胡斐家长</string>
+    <string name="like">点赞</string>
+    <string name="username">李阳:</string>
+    <string name="comment1">听说那里的湖很大,是吗?</string>
+    <!--<string name="no_data">你的家园圈还没有内容,快开添加吧~</string>-->
+    <string name="no_data">你的%s还没有内容,快开添加吧~</string>
+    <string name="no_internet">无可用网络</string>
+    <string name="select_pic_count">确定(%d/9)</string>
+    <string name="preview_pic">预览(%d)</string>
+    <string name="comment_count">评论(%d)</string>
+    <string name="selected_class_count">共(%d)班</string>
+    <string name="no_sdCard">"未找到存储卡，无法存储照片!"</string>
+    <string name="success">"发表成功"</string>
+    <string name="comment_tips">"评论内容不能为空"</string>
+    <string name="delete_succeed">"删除话题成功"</string>
+    <string name="comment_succeed">"评论话题成功"</string>
+    <string name="like_succeed">"点赞成功"</string>
+    <string name="unlike_succeed">"取消点赞成功"</string>
+    <string name="send_tips">"请填写发布内容或者选择照片"</string>
+    <string name="send_tips1">"请选择发布范围"</string>
+    <string name="content_count_limit">"发布内容不能超过500字"</string>
+
+    <!--详细资料-->
+    <string name="detail_info">详细资料</string>
+    <string name="head_image">头像</string>
+    <string name="mine_class">班级</string>
+    <string name="enter_time">入园时间</string>
+    <string name="birthday">出生日期</string>
+    <string name="father">爸爸</string>
+    <string name="mother">妈妈</string>
+    <string name="father_name">爸爸的名字</string>
+    <string name="mother_name">妈妈的名字</string>
+    <string name="input_father_name">请输入爸爸的名字</string>
+    <string name="input_mother_name">请输入妈妈的名字</string>
+    <string name="date_format">yyyy年MM月dd日</string>
+    <string name="error_date">不能设置当天以后的日期</string>
+    <!--课程计划-->
+    <string name="lesson_plan">课程计划</string>
+    <string name="dialog_content">确定删除吗?</string>
+    <string name="send_sms">同时发送短信</string>
+    <!--成长记录-->
+    <string name="check_student">选择学生</string>
+    <string name="grade">幼稚一班</string>
+    <string name="studentName">欧阳丹丹</string>
+    <string name="sleep">睡觉</string>
+    <string name="polite">礼貌</string>
+    <string name="mood">情绪</string>
+    <string name="meal">进餐</string>
+    <string name="behavior_home">在家表现</string>
+    <string name="behavior">在园表现</string>
+    <string name="activities">活动</string>
+    <string name="remark_hint">请在此输入您的评语...</string>
+    <string name="remark">%s评语</string>
+    <string name="remark_time">2016年4月9日</string>
+    <string name="succeed_send_remark">发布成长记录成功</string>
+    <string name="send_remark_tips">评分不能为空</string>
+    <string name="send_remark_tips1">评语不能为空</string>
+    <string name="teacher">老师</string>
+    <string name="parent">家长</string>
+    <string name="teacher1">教师</string>
+    <string name="class_qun">班群</string>
+
+
+    <!--录音-->
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="release_to_cancel">松开手指，取消发送</string>
+    <string name="recoding_fail">录音失败，请重试！</string>
+    <string name="record_audio_dialog_prepare">初始化录音</string>
+    <string name="record_audio_dialog_start">开始录音</string>
+    <string name="record_audio_dialog_too_short">录音时间太短</string>
+    <string name="record_audio_dialog_error">录音出错</string>
+
+    <string name="title_activity_teacher_homeland">TeacherHomelandActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="can_not_send_empty_content">"不能发送空值信息"</string>
+
+    <!--CTD相关 -->
+    <string name="gd_ctd_time">您本月剩余%s分钟免费通话时间</string>
+    <string name="gd_phone_title1">和教育将为您免费接通对方</string>
+    <string name="gd_phone_title2">正在拨打</string>
+    <string name="gd_phone_title3">和教育专线正在回拨</string>
+    <string name="gd_phone_title4">请等待接听</string>
+    <string name="gd_phone_title5">和教育专线线路繁忙</string>
+    <string name="gd_phone_title6">拨打失败</string>
+
+    <string name="gd_phone_report">重拨</string>
+    <string name="gd_phone_information">部分用户可能因手机，资费套餐类型，\n由运营商收取接听或漫游费用。</string>
+
+
+    <!-- XListView -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载…</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="title_activity_group_contacts">GroupContactsActivity</string>
+    <string name="title_activity_group_detail">GroupDetailActivity</string>
+    <string name="charge_class">所带班级</string>
+    <string name="charge_subject">所授课程</string>
+    <string name="my_album">相册</string>
+    <string name="baby_album">宝宝相册</string>
+    <string name="title_activity_intuduction">IntuductionActivity</string>
+
+    <string-array name="bottom_text_array">
+        <item name="work">工作台</item>
+        <item name="material">资料</item>
+        <item name="mine">我</item>
+    </string-array>
+
+    <!--资料-->
+    <string name="product_train">产品培训</string>
+    <string name="cp_bus_train">CP业务培训</string>
+    <string name="he_edu_version">和教育版本推广</string>
+    <string name="common_question">常见问题</string>
+    <string name="product_question">产品问题</string>
+    <string name="function_question">功能问题</string>
+</resources>

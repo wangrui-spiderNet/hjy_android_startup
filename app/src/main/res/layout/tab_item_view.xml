@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_3"
+    android:paddingTop="@dimen/padding_3">
+
+    <ImageView
+        android:id="@+id/iv_tabicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:focusable="false"
+        android:padding="3dp"
+        android:src="@drawable/mine_tab">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_tabname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_tabicon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dimen_2"
+        android:text="校园"
+        android:textColor="@drawable/tab_text_selector"
+        android:textSize="10sp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_new_msg_count"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_toRightOf="@id/iv_tabicon"
+        android:layout_alignTop="@id/iv_tabicon"
+        android:background="@drawable/new_msg_count_bg"
+        android:gravity="center"
+        android:layout_marginLeft="-10dp"
+        android:textSize="8dp"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
+
+</RelativeLayout>
