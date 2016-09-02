@@ -8,44 +8,41 @@ import android.view.ViewGroup;
 
 import cn.thinkjoy.startup.R;
 import cn.thinkjoy.startup.base.BaseFragment;
+import cn.thinkjoy.startup.base.MyApplication;
+import cn.thinkjoy.startup.bean.ContactsBean;
+import cn.thinkjoy.startup.db.ContactsDao;
+import cn.thinkjoy.startup.util.Log;
 
 
 /**
  * Created by wangrui on 2016/6/20.
  */
 public class MaterialPageFragment extends BaseFragment {
-    private static MaterialPageFragment stationFragment;
 
-    private View view ;
-    public static final String TAG="MaterialPageFragment";
-
-    public static MaterialPageFragment newInstance(Bundle bundle) {
-        stationFragment = new MaterialPageFragment();
-        if(bundle!=null){
-            stationFragment.setArguments(bundle);
-        }
-
-        return stationFragment;
-    }
+    private View view;
+    public static final String TAG = "MaterialPageFragment";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if(view==null){
-            view=LayoutInflater.from(getActivity()).inflate(R.layout.fragment_material ,null);
+        if (view == null) {
+            view = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_material, null);
             init(view);
-        }else{
+        } else {
 
-            ViewGroup viewGroup=(ViewGroup)(view.getParent());
-            if(viewGroup!=null){
-                viewGroup .removeView(view);
+            ViewGroup viewGroup = (ViewGroup) (view.getParent());
+            if (viewGroup != null) {
+                viewGroup.removeView(view);
             }
         }
+
+        queryContacts();
 
         return view;
     }
 
-    private void init(View view){
+    private void init(View view) {
+
     }
 
     @Override
@@ -62,4 +59,14 @@ public class MaterialPageFragment extends BaseFragment {
     protected void initComponent() {
 
     }
+
+    private void queryContacts() {
+        ContactsDao dao = new ContactsDao(MyApplication.getAppContext());
+        ContactsBean contactsBean = dao.queryContacts();
+
+        if (contactsBean != null) {
+            Log.e("通讯录：" + contactsBean.toString());
+        }
+    }
+
 }

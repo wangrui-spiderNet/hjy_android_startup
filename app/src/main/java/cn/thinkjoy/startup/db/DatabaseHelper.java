@@ -12,23 +12,27 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.thinkjoy.startup.bean.User;
+import cn.thinkjoy.startup.bean.ContactsBean;
+import cn.thinkjoy.startup.bean.ContactsGroups;
+import cn.thinkjoy.startup.bean.ContactsInformation;
 
 
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
-    private static final String TABLE_NAME = "gdchannel.db";
+    private static final String DB_NAME = "gdchannel.db";
 
     private Map<String, Dao> daos = new HashMap<String, Dao>();
 
     private DatabaseHelper(Context context) {
-        super(context, TABLE_NAME, null, 4);
+        super(context, DB_NAME, null, 4);
     }
 
     @Override
     public void onCreate(SQLiteDatabase database,
                          ConnectionSource connectionSource) {
         try {
-            TableUtils.createTable(connectionSource, User.class);
+            TableUtils.createTable(connectionSource, ContactsBean.class);
+            TableUtils.createTable(connectionSource, ContactsGroups.class);
+            TableUtils.createTable(connectionSource, ContactsInformation.class);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -38,7 +42,9 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     public void onUpgrade(SQLiteDatabase database,
                           ConnectionSource connectionSource, int oldVersion, int newVersion) {
         try {
-            TableUtils.dropTable(connectionSource, User.class, true);
+            TableUtils.dropTable(connectionSource, ContactsBean.class, true);
+            TableUtils.dropTable(connectionSource, ContactsGroups.class, true);
+            TableUtils.dropTable(connectionSource, ContactsInformation.class, true);
             onCreate(database, connectionSource);
         } catch (SQLException e) {
             e.printStackTrace();

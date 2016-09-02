@@ -234,4 +234,126 @@
     <string name="common_question">常见问题</string>
     <string name="product_question">产品问题</string>
     <string name="function_question">功能问题</string>
+
+    <string name="test"></string>
+
+    <string name="testData">{
+    "cmd":10021,
+    "state":1,
+    "msg":"请求成功！",
+    "dt":1472788665601,
+    "groups":[
+        {
+            "id":"G497743",
+            "name":"今天",
+            "desc":null,
+            "belong":"21",
+            "type":21,
+            "creater":104556746,
+            "createrType":1,
+            "thumb":"http://www.ydxxt.com//static/common/images/icon_class.png",
+            "count":138,
+            "isDel":0,
+            "status":0,
+            "classId":0,
+            "jid":"/group/gd/gz/21/G497743"
+        },
+        {
+            "id":"CLT102203314",
+            "name":"教师",
+            "desc":null,
+            "belong":"1",
+            "type":1,
+            "creater":0,
+            "createrType":0,
+            "thumb":"http://www.ydxxt.com//static/common/images/icon_group.png",
+            "count":50,
+            "isDel":0,
+            "status":0,
+            "classId":0,
+            "jid":null
+        },
+        {
+            "id":"CLF102203314",
+            "name":"家长",
+            "desc":null,
+            "belong":"2",
+            "type":2,
+            "creater":0,
+            "createrType":0,
+            "thumb":"http://www.ydxxt.com//static/common/images/icon_group.png",
+            "count":78,
+            "isDel":0,
+            "status":0,
+            "classId":102203314,
+            "jid":null
+        }
+    ],
+    "contacts":[
+        {
+            "id":104561644,
+            "name":"压测",
+            "groupIds":"CLT102203314",
+            "type":1,
+            "avatar":"http://www.ydxxt.com//static/common/images/icon_user.png",
+            "avatarThumb":"http://www.ydxxt.com//static/common/images/icon_user.png",
+            "phone":"13450953452",
+            "relation":"",
+            "stuNumber":null,
+            "stuName":"",
+            "remarks":null,
+            "xxtEnable":1,
+            "following":-1,
+            "ctd":"",
+            "studentId":0,
+            "jid":"/user/gd/gz/1/104561644",
+            "createrType":-1
+        },
+        {
+            "id":104495138,
+            "name":"颜青山",
+            "groupIds":"CLT102203314",
+            "type":1,
+            "avatar":"http://www.ydxxt.com//static/common/images/icon_user.png",
+            "avatarThumb":"http://www.ydxxt.com//static/common/images/icon_user.png",
+            "phone":"15809251215",
+            "relation":"",
+            "stuNumber":null,
+            "stuName":"",
+            "remarks":null,
+            "xxtEnable":1,
+            "following":-1,
+            "ctd":"",
+            "studentId":0,
+            "jid":"/user/gd/gz/1/104495138",
+            "createrType":-1
+        },
+        {
+            "id":107008435,
+            "name":"颜青山家长",
+            "groupIds":"CLF102203314",
+            "type":2,
+            "avatar":"http://www.ydxxt.com//static/common/images/icon_user.png",
+            "avatarThumb":"http://www.ydxxt.com//static/common/images/icon_user.png",
+            "phone":"15809251215",
+            "relation":"",
+            "stuNumber":"160100076617",
+            "stuName":"颜青山",
+            "remarks":"颜青山家长",
+            "xxtEnable":0,
+            "following":-1,
+            "ctd":"",
+            "studentId":107487095,
+            "jid":"/user/gd/gz/2/107008435",
+            "createrType":-1
+        }
+    ],
+    "disableGroups":[
+
+    ],
+    "operationTime":"2016-09-02 11:57:45"
+}</string>
+
+    <string name="test_json"></string>
+
 </resources>

@@ -6,8 +6,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Date;
+
 import cn.thinkjoy.startup.R;
 import cn.thinkjoy.startup.base.BaseActivity;
+import cn.thinkjoy.startup.base.MyApplication;
+import cn.thinkjoy.startup.bean.ContactsBean;
+import cn.thinkjoy.startup.db.ContactsDao;
+import cn.thinkjoy.startup.util.APPPreferenceUtil;
+import cn.thinkjoy.startup.util.ConstantSet;
+import cn.thinkjoy.startup.util.DateUtils;
+import cn.thinkjoy.startup.util.JsonUtil;
 import cn.thinkjoy.startup.widget.FragmentTabHost;
 
 /**
@@ -24,7 +33,7 @@ public class MainActivity extends BaseActivity {
     public static Class mFragmentArray[] = {WorkPageFragment.class, MaterialPageFragment.class,
             MePageFragment.class};
     private String mTextArray[] = {"工作台", "资料", "我"};
-    private int mImageArray[] = {R.drawable.home_tab,R.drawable.contact_tab, R.drawable.mine_tab};
+    private int mImageArray[] = {R.drawable.home_tab, R.drawable.contact_tab, R.drawable.mine_tab};
 
     private TextView tv_new_msg_count;
 
@@ -35,6 +44,7 @@ public class MainActivity extends BaseActivity {
         instance = this;
 
         initTabHost();
+        loadData();
     }
 
     private void initTabHost() {
@@ -74,6 +84,46 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void getIntentData() {
 
+    }
+
+    private void loadData() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                // 请求离线通讯录
+                ContactsBean contactsBean = analyticalContactsJson(ConstantSet.test_json);
+
+                if (null != contactsBean) {
+                    APPPreferenceUtil.getInstance().setPrefString(ConstantSet.REFRESH_CONTACT_DAY, DateUtils.dateToString(new Date(),
+                            ConstantSet.DATE_FORMAT));
+                    APPPreferenceUtil.getInstance().setPrefBoolean(ConstantSet.IS_REFRESH_CONTACT, false);
+                    // 填充userId
+                    if (role != null) {
+                        contactsBean.setUserId(role.getUserId());
+                    }
+                    // 插入离线数据
+                    ContactsDao dao = new ContactsDao(MyApplication.getAppContext());
+                    dao.insertContactsInfo(contactsBean);
+
+                }
+            }
+        }).start();
+    }
+
+    /**
+     * 转成实体类
+     *
+     * @param responseBody
+     * @return
+     */
+    private ContactsBean analyticalContactsJson(String responseBody) {
+        try {
+            ContactsBean contactGroupList = JsonUtil.parseObject(responseBody, ContactsBean.class);
+            return contactGroupList;
+        } catch (Exception e) {
+            return null;
+        }
     }
 
 }
