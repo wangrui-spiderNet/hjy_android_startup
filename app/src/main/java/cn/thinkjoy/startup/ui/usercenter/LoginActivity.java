@@ -20,8 +20,6 @@ import android.widget.TextView;
 import com.socks.okhttp.callback.OkCallback;
 import com.socks.okhttp.parser.OkJsonParser;
 
-import java.io.IOException;
-
 import cn.thinkjoy.startup.R;
 import cn.thinkjoy.startup.base.BaseActivity;
 import cn.thinkjoy.startup.base.MyApplication;
@@ -33,8 +31,6 @@ import cn.thinkjoy.startup.util.ConstantSet;
 import cn.thinkjoy.startup.util.RoleSerializableUtil;
 import cn.thinkjoy.startup.util.ToastUtil;
 import cn.thinkjoy.startup.widget.SearchEditText;
-import okhttp3.Call;
-import okhttp3.Response;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener, SearchEditText.ISeekPwdListener {
 
@@ -216,15 +212,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         UserCenterApi.getInstance().loginMobile(mContext, accout, pwd,
                 new OkCallback<LoginBean>(new OkJsonParser<LoginBean>() {
                 }) {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-
-                    }
-
-                    @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-
-                    }
 
                     @Override
                     public void onStart() {

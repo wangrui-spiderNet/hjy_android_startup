@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.socks.okhttp.callback.OkCallback;
 import com.socks.okhttp.parser.OkJsonParser;
 
-import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -30,8 +29,6 @@ import cn.thinkjoy.startup.util.IntentUtils;
 import cn.thinkjoy.startup.util.StringUtils;
 import cn.thinkjoy.startup.util.ToastUtil;
 import cn.thinkjoy.startup.widget.SearchEditText;
-import okhttp3.Call;
-import okhttp3.Response;
 
 /**
  * 忘记密码
@@ -274,15 +271,6 @@ public class ForgetpwdActivity extends BaseActivity implements View.OnClickListe
 
     public void doGetAuthCode(Context context, String accout) {
         UserCenterApi.getInstance().getAuthCode(context, accout, new OkCallback<SampleBean>(new OkJsonParser<SampleBean>(){}) {
-            @Override
-            public void onFailure(Call call, IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-            }
 
             @Override
             public void onStart() {
@@ -311,15 +299,6 @@ public class ForgetpwdActivity extends BaseActivity implements View.OnClickListe
     public void doForgetPwd(Context context, String accout, String authcode, String pwd, int type) {
         UserCenterApi.getInstance().doForgetPwd(context,accout, authcode,  pwd, type,
                 new OkCallback<SampleBean>(new OkJsonParser<SampleBean>(){}) {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-
-                    }
-
-                    @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-
-                    }
 
                     @Override
                     public void onStart() {
