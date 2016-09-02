@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import cn.thinkjoy.startup.R;
 import cn.thinkjoy.startup.base.BaseFragment;
-import cn.thinkjoy.startup.ui.activity.SampleListActivity;
+import cn.thinkjoy.startup.ui.SampleListActivity;
 
 
 /**

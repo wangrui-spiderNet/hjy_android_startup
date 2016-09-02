@@ -1,4 +1,4 @@
-package cn.thinkjoy.startup.ui.activity;
+package cn.thinkjoy.startup.ui;
 
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;

@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 
 import cn.thinkjoy.startup.R;
 import cn.thinkjoy.startup.base.BaseFragment;
@@ -18,7 +17,6 @@ public class MaterialPageFragment extends BaseFragment {
     private static MaterialPageFragment stationFragment;
 
     private View view ;
-    private RelativeLayout material_cp_business_layout;
     public static final String TAG="MaterialPageFragment";
 
     public static MaterialPageFragment newInstance(Bundle bundle) {
@@ -48,17 +46,11 @@ public class MaterialPageFragment extends BaseFragment {
     }
 
     private void init(View view){
-        material_cp_business_layout=(RelativeLayout)view.findViewById(R.id.material_cp_business_layout);
-        material_cp_business_layout.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()){
-            case R.id.material_cp_business_layout:
-                break;
-        }
     }
 
     @Override

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.ActionMode;
@@ -186,23 +185,25 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                 }
                 break;
             case R.id.btn_login:
-                account = mEtAccout.getText().toString().trim();
-                password = mEtPwd.getText().toString().trim();
-                if (TextUtils.isEmpty(account)) {
-                    ToastUtil.showToast(mContext, "登录账号不能为空");
-                    return;
-                }
-                if (TextUtils.isEmpty(password)) {
-                    ToastUtil.showToast(mContext, "密码不能为空");
-                    return;
-                }
+//                account = mEtAccout.getText().toString().trim();
+//                password = mEtPwd.getText().toString().trim();
+//                if (TextUtils.isEmpty(account)) {
+//                    ToastUtil.showToast(mContext, "登录账号不能为空");
+//                    return;
+//                }
+//                if (TextUtils.isEmpty(password)) {
+//                    ToastUtil.showToast(mContext, "密码不能为空");
+//                    return;
+//                }
+//
+//                if (password.length() < 6) {
+//                    ToastUtil.showToast(mContext, "请输入6-16位登录密码");
+//                    return;
+//                }
 
-                if (password.length() < 6) {
-                    ToastUtil.showToast(mContext, "请输入6-16位登录密码");
-                    return;
-                }
+//                doLogin(mContext,account, password);
+                startActivity(new Intent(mContext, MainActivity.class));
 
-                doLogin(mContext,account, password);
             default:
                 break;
         }
